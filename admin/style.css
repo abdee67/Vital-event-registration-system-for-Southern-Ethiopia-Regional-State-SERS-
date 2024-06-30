@@ -1,0 +1,66 @@
+.branding{
+	size: 17px;
+}
+.showcase{
+	background: url(img/img2.jpg) no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 600px;
+	padding: 140px 100px;
+	color: #fff;
+}
+.showcase h1{
+	margin: auto;
+	
+	font-weight: 700px;
+	font-family:Algerian;
+}
+.showcase hr{
+	
+	margin: auto;
+	border-width: 3px;
+	border-color: green;
+}
+.showcase p{
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+.section{
+	padding: 40px 0;
+}
+.section h2{
+	padding: 0;
+	margin: 0;
+}
+.section .fa{
+	font-size: 50px;
+}
+.section img{
+	width: 100%;
+}
+@media only screen and (max-width: 600px){
+	body{
+		margin-top: 190px;
+	}
+}
+.showcase{
+	height: 400px;
+	padding: 60px 0;
+}
+.address-box .address-body  .address-item {
+	color: #81878C;
+	border-bottom: 1px solid #eee;
+	padding: 20px 0;
+	font-weight: 600;
+}
+.address-body .address-item:last-child{
+	border-bottom: none;
+}
+.address-box .address-body  .address-item  i {
+	margin-top: 5px;
+	font-size: 16px;
+}
+.address-box .address-body  .address-item p {
+	line-height: 2;
+	margin: 0;
+}

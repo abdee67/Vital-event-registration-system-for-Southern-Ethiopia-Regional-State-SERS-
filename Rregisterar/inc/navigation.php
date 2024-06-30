@@ -1,0 +1,52 @@
+ ?>
+            <?php 
+                $LoggedInName=$_SESSION['LoginUsername'];
+                $LoggedInPassword=$_SESSION['LoginPassword'];
+                $UserInfo="SELECT *FROM memberuser where name='$LoggedInName ' AND password='$LoggedInPassword'";
+                if($run=mysqli_query($con,$UserInfo)){
+                    $User=mysqli_fetch_array($run);
+                        $FristName=$User['name'];
+                        $UserImage=$User['pic'];
+                        $UserEmail=$User['email'];
+                        $UserPhone=$User['phone'];
+                        $UserPassword=$User['password'];
+                        $_SESSION['Uimage']=$UserImage;
+                        $sessImage=$_SESSION['Uimage']; 
+                    }
+                  ?>
+    <!DOCTYPE html>
+     <html>
+       <head>
+
+            <link rel="stylesheet" href="../w3.css"> 
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+         </head>
+             <body>
+             
+             </body>
+     </html>
+     <div class="top_nav navbar-fixed-top w3-hide-small">
+     <div class="nav_menu"  style="background-color:blue">
+                    <nav class="w3-hover-blue">
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div> 
+                        <ul class="nav navbar-nav navbar-right" >
+                           <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle w3-hover-blue" data-toggle="dropdown" aria-expanded="false">
+									 <?php echo "<img src='../StaffPic/$UserImage' alt='Profile Image' class='img-circle'>"; ?>
+                               <span class="glyphicon glyphicon-chevron-down"></span>
+								</a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right w3-hover-white">
+                                    <li><a href="detail.php"> Profile</a></li>
+                                    <li>
+                                        <a href="inc/logout.php">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                            </li>
+                     </ul>
+               </nav>
+         </div>
+     </div>
